@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BOSubviewsViewController.swift
 //  BODropdownMenu
 //
 //  Created by Bartosz Olszanowski on 05.11.2015.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BOSubviewsViewController: UIViewController {
     
     //MARK: Properties
     @IBOutlet weak var dropDownMenu: BODropdownMenu! {
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
 }
 
 // BODropdownMenuDelegate
-extension ViewController: BODropdownMenuDelegate {
+extension BOSubviewsViewController: BODropdownMenuDelegate {
     func menu(menu: BODropdownMenu, didSelectElementAtIndexPath indexPath: NSIndexPath) {
         print("Selected element at index = \(indexPath.row)")
     }

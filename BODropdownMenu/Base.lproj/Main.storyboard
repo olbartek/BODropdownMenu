@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dtO-vg-KkM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--With Subviews-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BODropdownMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BOSubviewsViewController" customModule="BODropdownMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gBX-4Z-f3D" customClass="BOHitView" customModule="BODropdownMenu" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="95V-Uq-zm1">
-                                        <rect key="frame" x="0.0" y="400" width="600" height="200"/>
+                                        <rect key="frame" x="0.0" y="468" width="414" height="268"/>
                                         <color key="backgroundColor" red="0.1960784314" green="0.53725490200000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQ8-ou-b9C">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="268"/>
                                         <color key="backgroundColor" red="0.1960784314" green="0.53725490200000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZ8-nw-GlB">
-                                        <rect key="frame" x="0.0" y="200" width="600" height="200"/>
+                                        <rect key="frame" x="0.0" y="268" width="414" height="200"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaZ-iY-84X" customClass="BODropdownMenu" customModule="BODropdownMenu">
                                                 <rect key="frame" x="-75" y="85" width="150" height="30"/>
@@ -85,6 +85,7 @@
                             <constraint firstItem="gBX-4Z-f3D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="quV-F2-H1O"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="With Subviews" id="2Oj-kn-dHG"/>
                     <connections>
                         <outlet property="dropDownMenu" destination="yaZ-iY-84X" id="zIS-fe-k3l"/>
                         <outlet property="hitView" destination="gBX-4Z-f3D" id="nr0-Sm-O2N"/>
@@ -92,7 +93,62 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1051" y="259"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="q3F-5f-3ac">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dtO-vg-KkM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="ywW-Qg-lnT">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="z8K-D4-sIZ"/>
+                        <segue destination="0FD-CM-v9n" kind="relationship" relationship="viewControllers" id="ff4-id-oxA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3qr-yY-7zj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="523" y="259"/>
+        </scene>
+        <!--Without Subviews-->
+        <scene sceneID="Jv5-SS-3ED">
+            <objects>
+                <viewController id="0FD-CM-v9n" customClass="BOWithoutSubviewsViewController" customModule="BODropdownMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u6p-Sq-eWj"/>
+                        <viewControllerLayoutGuide type="bottom" id="VhU-mk-6Ix"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ezt-9W-HSb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVr-06-DN6" customClass="BODropdownMenu" customModule="BODropdownMenu">
+                                <rect key="frame" x="132" y="353" width="150" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="n8b-Gj-QJ5"/>
+                                    <constraint firstAttribute="height" constant="30" id="vQu-9Y-ngf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SVr-06-DN6" firstAttribute="centerX" secondItem="ezt-9W-HSb" secondAttribute="centerX" id="1xd-lW-bWz"/>
+                            <constraint firstItem="SVr-06-DN6" firstAttribute="centerY" secondItem="ezt-9W-HSb" secondAttribute="centerY" id="Kjl-Co-YQQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Without Subviews" id="cL4-Gn-e8F"/>
+                    <connections>
+                        <outlet property="dropDownMenu" destination="SVr-06-DN6" id="71B-Jv-CCd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uXk-zh-KLF" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1051" y="1169"/>
         </scene>
     </scenes>
 </document>
