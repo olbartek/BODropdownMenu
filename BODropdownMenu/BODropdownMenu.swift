@@ -426,7 +426,7 @@ public class BODropdownMenu: UIView {
         // Appearance
         configureActionButtonAppearance()
         // Actions
-        actionButton.addTarget(self, action: "menuAction:", forControlEvents: .TouchUpInside)
+        actionButton.addTarget(self, action: #selector(BODropdownMenu.menuAction(_:)), forControlEvents: .TouchUpInside)
     }
     
     private func configureActionButtonAppearance() {
@@ -569,7 +569,7 @@ public class BODropdownMenu: UIView {
     }
     
     //MARK: Animations
-    @IBAction private func menuAction(sender: UIButton?) {
+    @IBAction public func menuAction(sender: UIButton?) {
         guard let menuVC = menuVC else {
             return
         }
@@ -980,10 +980,10 @@ extension UIView {
      */
     public func isSuper(v : UIView) -> Bool
     {
-        for var s : UIView? = self; s != nil; s = s?.superview {
-            if(v == s) {
-                return true;
-            }
+        var s: UIView? = self
+        while (s != nil) {
+            if(v == s) { return true }
+            s = s?.superview
         }
         return false
     }
