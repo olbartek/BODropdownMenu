@@ -2,18 +2,18 @@
 
 Custom drop down menu for iOS Applications.
 
-![alt tag](https://raw.githubusercontent.com/olbartek/BODropdownMenu/master/BODropdownMenu/dropdown.gif)
+<img src="https://raw.githubusercontent.com/olbartek/BODropdownMenu/master/BODropdownMenu/dropdown.gif" width="200">
 
 ## 1.1 Configuration
 
-```
+```swift
 dropDownMenu.elements = ["Option 1", "Option 2", "Option 3", "Option 4", "Option 5", "Option 6", "Option 7"]
 dropDownMenu.delegate = self
 ```
 
 ## 1.2 Customization
 
-```
+```swift
 // Colors & Border
 dropDownMenu.menuViewBackgroundColor        = UIColor.grayColor()
 dropDownMenu.borderVisible                  = true
